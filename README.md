@@ -12,7 +12,7 @@ In this project, I developed a Linear Quadratic Gaussian (LQR controller + Kalma
 ## Visuals
 Control System Demonstration
 
-<video src="./media/control_sys_test_hardware.mp4" controls="controls" muted="muted" autoplay="autoplay" width="600" title="Project Demonstration">
+<video src="https://raw.githubusercontent.com/johnglennII/Tomato-Harvester/main/media/control_sys_test_hardware.mp4" controls="controls" muted="muted" autoplay="autoplay" width="600" title="Project Demonstration">
 </video>
 
 Mechanical Design
