@@ -10,6 +10,11 @@ In this project, I developed a Linear Quadratic Gaussian (LQR controller + Kalma
 * Handled simulated range and range-rate measurements.
 
 ## Visuals
+Control System Demonstration
+
+<video src="./media/control_sys_test_hardware.mp4" controls="controls" muted="muted" autoplay="autoplay" width="100" title="Project Demonstration">
+</video>
+
 Mechanical Design
 
 <p float="left">
