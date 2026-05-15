@@ -2,13 +2,12 @@
 clc; clear; close('all');
 
 g = 9.81; % [m/s^2]
-n = 184;
+n = 184; % gear ratio
 
-m_act_base = .591; % [kg] WRONG
+m_act_base = .591; % [kg]
 m_act_rod = 0.154; % [kg]
-m_act_screw = 0.41; % [kg] WRONG
-% m_act_case = 0.1287; % [kg] WRONG
-m_act_case = 0.209; % [kg] WRONG
+m_act_screw = 0.41; % [kg]
+m_act_case = 0.209; % [kg]
 m_load = 0; % [kg] include??
 m_act = m_act_base + m_act_rod + m_act_screw + m_act_case + m_load; % [kg]
 
@@ -36,10 +35,8 @@ J_m1out = (n^2)*J_r1 + J_r2 + J_column_phi;
 J_load_phi = 0;
 J_const_phi = J_m1out + J_load_phi;
 %Actuator MOI f(theta) BUT actually theta and r
-J_act_horiz = 0.34656; % CAD GUESS 
-% J_act_horiz = .5; %WRONG
+J_act_horiz = 0.34656; % CAD GUESS
 J_act_vert = .005; % CAD GUESS
-%J_act_vert = .01; %WRONG
 J_act_const_phi = (J_act_vert + J_act_horiz)/2;
 J_act_var_phi = (J_act_vert - J_act_horiz)/2; % [kg*m^2]
 
@@ -61,8 +58,8 @@ J_const_theta = J_m2out;
 J_act_const_theta = ((m_act_base + m_act_case + m_act_screw)*(.5588^2) + m_act_rod*(.508^2))/3;
 
 
-r_cg_const = (l_act_const*.5*(m_act_case + m_act_screw) + .06*m_act_base)/m_act; % [m] WRONG
-r_cg_var = ((.4572 + l_act_rod*.5)*m_act_rod + (.4572 + l_act_const)*m_load)/m_act; % [m] WRONG
+r_cg_const = (l_act_const*.5*(m_act_case + m_act_screw) + .06*m_act_base)/m_act; % [m]
+r_cg_var = ((.4572 + l_act_rod*.5)*m_act_rod + (.4572 + l_act_const)*m_load)/m_act; % [m]
 r_cg = r_cg_const + r_cg_var;
 
 R_a2 = 1.36; % [ohm]
@@ -95,7 +92,6 @@ double(subs(x2_partial_x4,[x2 x3 x4],[x2_o x3_o x4_o]));
 
 % x5 linearized
 syms x4 x5 x6 x7
-%x5_dot = (m_act*g*r_cg*sin(x4) - b_eq_theta*x5 + n*K_r2*x6)/(J_const_theta + J_act_const_theta + m_act_rod*(x7)^2); %ODE
 x5_dot = (m_act*g*(r_cg_const + ((x7 + l_act_rod*.5)*m_act_rod + (x7 + l_act_const)*m_load)/m_act)*sin(x4) - b_eq_theta*x5 + n*K_r2*x6)/(J_const_theta + J_act_const_theta + m_act_rod*(x7)^2); %ODE
 
 x5_partial_x4 = diff(x5_dot, x4);
@@ -153,11 +149,8 @@ fprintf('Rank of the Observability Matrix: %d\n', rank_Om);
 uO = size(A, 1) - rank_Om;
 fprintf('The System has <strong>%d</strong> Unobservable States.\n\n', uO);
 
-% Q = diag([100 1 1 100 1 1 10000 1 .1]);
-% Q = diag([500 1 1 500 1 1 10000 1 .1]);
-R = diag([5 10 .005]);
 Q = diag([500 1 1 500 1 1 10000 1 .1]);
-% R = diag([5 10 0.05]); % try 5->10 or 7.5
+R = diag([5 10 .005]);
 
 K = lqr(A,B,Q,R);
 disp('State Feedback Gains (K):');
