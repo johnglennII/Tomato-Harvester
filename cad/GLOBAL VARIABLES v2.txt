@@ -1,0 +1,45 @@
+﻿"WallThickness"= 0.5cm
+"BottomPlateX"= 3ft
+"BottomPlateZ"= 2ft
+"BottomPlateHoleD"=(("ArmPlateX")^2+("ArmPlateDepth")^2)^.5+ 10mm
+
+"ActuatorPinD"= 6.35mm
+"ActuatorPinL"= 15cm
+"Box-X"= 40cm
+"Box-Z"= 20cm
+"Box-Y"= 30cm
+
+"ArmPlateThickness"= .125in
+"ArmPlateX"= 18in
+"ArmPlateDepth"= 7.1875in
+
+"DCMotor1D"= 65mm
+"DCMotor1L"= 215mm
+"DCMotor1ShaftL"= 30mm
+
+"DCMotor2X"= 68mm
+"DCMotor2D"= 65mm
+"DCMotor2L"= 208mm
+"DCMotor2ShaftL"= 39mm
+"DCMotor2ShaftD"= 15mm
+
+"BenchDepth"= 5cm
+"BenchH"= 10cm
+"BenchL"= 15cm
+
+"PillowBlockW"= 5cm
+"PillowBlockCenterH"= "DCMotor2X"/2
+
+"EncoderRadius"= 19mm
+"EncoderShaftL"= 15mm
+"EncoderL"= 33mm
+"EncoderHousingThickness"= 7.5mm
+
+"TurntableID"= 70mm
+"TurntableInner2*t" = ("TurntableOD"-"TurntableID")*.25 - 1mm
+"TurntableInnerHoleRadius"= "TurntableID"*.5 + "TurntableInner2*t"*.5
+"TurntableOD"= 120mm
+"TurntableOuterHoleRadius" = "TurntableOD"*.5 - (("TurntableOD"-"TurntableID")*.25-.5mm)*.5
+
+"2525Height" = 30cm
+
