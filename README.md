@@ -46,6 +46,7 @@ Derived equations of motion for the electrical and mechanical system.
 
 <img src="./media/simulink_EOMs.png" height="50%" alt="Equations of Motion"/>
 
-## Skills Used
-**Software:** MATLAB
-**Concepts:** 
+## Skills & Software Used
+* **Software:** MATLAB, Simulink, Simulink Desktop Real-Time, SolidWorks
+* **Hardware:** oscilloscope, rotary encoders, data acquisition card, motor controllers, microcontrollers, vertical mill
+<!--**Concepts:** -->
