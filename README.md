@@ -10,7 +10,6 @@ In this project, I developed the mechanical design, electromechanical model, and
 * **System Identification:** Applied grey-box system identification to accurately obtain unkown model parameters using experimental data.
 * **Custom Fabrication:** Designed many hardware elements using Design for Manufacturing (DFM) principles and machined components on a vertical mill.
 
-
 ## Visuals
 ### 1. Control System Demonstration
 Closed-loop system moving to a pseudo tomato location, closing gripper, retracting, opening gripper, and returning to the origin.
@@ -23,18 +22,19 @@ Closed-loop system moving to a pseudo tomato location, closing gripper, retracti
 The control system is built in Simulink/Simulink Desktop Real-Time and operates as a state machine. It captures images on both cameras, identifies tomatoes and triangulates positions, updates setpoint and moves to tomato location, closes gripper, retracts, opens gripper, returns to origin, and repeats.
 
 <p align="center">
-  <img src="./media/simulink_control_sys.png" height="200" alt="Control System"/>
-  <img src="./media/simulink_state_machine.png" height="200" alt="State Machine Logic"/>
+  <img src="./media/simulink_control_sys.png" width="49%" alt="Control System"/>
+  <img src="./media/simulink_state_machine.png" width="49%" alt="State Machine Logic"/>
 </p>
 
 ### 3. Controller Performance
 The following figure shows the control input voltage (top) and the corresponding position and set point (bottom) for each of the three axes of a test case.
+
 <p align="center">
   <img src="./media/v_vs_pos.png" width="75%" alt="Control input vs Position"/>
 </p>
 
 ### 4. Mechanical Design
-The mechanical design was chosen to resemble spherical coordinates using two brushed DC motors and a screw linear actuator.
+The mechanical design was chosen to resemble spherical coordinates using two brushed DC motors and a screw linear actuator for the main motion and a stepper motor for the gripping mechanism.
 
 <p align="center">
   <img src="./media/actual_assembly.png" height="300" alt="Actual Assembly"/>
@@ -44,7 +44,9 @@ The mechanical design was chosen to resemble spherical coordinates using two bru
 ### 5. Electromechanical Dynamics Model
 Derived equations of motion for the electrical and mechanical system.
 
-<img src="./media/simulink_EOMs.png" height="50%" alt="Equations of Motion"/>
+<p align="center">
+  <img src="./media/simulink_EOMs.png" height="50%" alt="Equations of Motion"/>
+</p>
 
 ## Skills & Software Used
 * **Software:** MATLAB, Simulink, Simulink Desktop Real-Time, SolidWorks
