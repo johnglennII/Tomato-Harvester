@@ -1,5 +1,5 @@
 # Tomato-Harvester
-*4-DOF Autonomous tomato harvester robotic manipulator featuring a MIMO LQG control system and computer vision, implemented in MATLAB/Simulink.*
+*4-dof Autonomous tomato harvester robotic manipulator featuring a MIMO LQG control system and computer vision, implemented in MATLAB/Simulink.*
 
 ## Project Overview
 In this project, I developed the mechanical design, electromechanical model, and control architecture for an autonomous tomato harvester robotic arm. Using voltage control across two DC motors and a DC linear actuator, I was able to precisely position the end-effector using a Linear Quadratic Regulator (LQR) controller. Of the 9 total states, the 3 positions ($\phi, \theta, r$) were the only ones measured so a Kalman Filter was used to estimate the remaining states.
