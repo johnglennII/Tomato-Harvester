@@ -30,6 +30,7 @@ L_a3 = 0.1; % [H] (free/unknown)
 b_eq_r = 0.023906250000000; % (free/unknown)
 
 linear_model = idgrey(@actuator, {b_eq_r, J_eq_r, p_s, n_3, K_r3, L_a3, R_a3}, 'c');
+Labels = {'b_eq_r'; 'J_eq_r'; 'p_s'; 'n_3'; 'K_r3'; 'L_a3'; 'R_a3'};
 
 linear_model.Structure.Parameters(3).Free = false;
 linear_model.Structure.Parameters(4).Free = false;
@@ -42,7 +43,9 @@ linear_model = greyest(actuatorData2,linear_model,opt);
 
 estimatedParams = linear_model.Report.Parameters.ParVector;
 disp('Estimated Parameters:');
-disp(estimatedParams);
+for i = 1:length(Labels)
+    fprintf('%s: %.4f\n', Labels{i,1}, estimatedParams(i,1));
+end
 
 compare(actuatorData2, linear_model)
 
@@ -69,7 +72,7 @@ end
 n = 184;
 J_const_phi = 101.5680;
 R_a1 = 1.36; % [Ohm]
-K_r1 = .11; % [Nm/A] or [Nm*s/rad] CHANGE
+K_r1 = .11; % [Nm/A] or [Nm*s/rad]
 L_a1 = 0.3; % [H]
 b_eq_phi = 46.8204;
 
@@ -88,7 +91,6 @@ estimatedParams = linear_model.Report.Parameters.ParVector;
 disp('Estimated Parameters:');
 for i = 1:6
     fprintf('%s: %.4f\n', Labels{i,1}, estimatedParams(i,1));
-%disp(estimatedParams);
 end
 
 compare(motorData, linear_model)
