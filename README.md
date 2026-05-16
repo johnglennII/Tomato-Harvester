@@ -35,7 +35,8 @@ The mechanical design was chosen to resemble spherical coordinates using two bru
   <img src="./media/cad_assembly_2.png" height="300" alt = "CAD Assembly"/>
 </p>
 
-## 4. Electromechanical Dynamics Model
+### 4. Electromechanical Dynamics Model
+Derived equations of motion for the electrical and mechanical system.
 
 <img src="./media/simulink_EOMs.png" height="50%" alt="Equations of Motion"/>
 
