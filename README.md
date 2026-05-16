@@ -19,7 +19,7 @@ Closed-loop system moving to a pseudo tomato location, closing gripper, retracti
 </p>
 
 ### 2. Simulink Control Architecture
-The control system is built in Simulink/Simulink Desktop Real-Time and operates as a state machine. It captures images on both cameras, identifies tomatoes and triangulates positions, updates setpoint and moves to tomato location, closes gripper, retracts, opens gripper, returns to origin, and repeats.
+The control system is built in Simulink/Simulink Desktop Real-Time and operates as a state machine. It captures images on both cameras, identifies tomatoes and triangulates positions, updates setpoint and moves to tomato location, closes gripper, updates setpoint and retracts, opens gripper, updates setpoint and returns to origin, then repeats.
 
 <p align="center">
   <img src="./media/simulink_control_sys.png" width="49%" alt="Control System"/>
