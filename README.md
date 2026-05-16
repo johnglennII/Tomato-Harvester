@@ -37,15 +37,15 @@ The following figure shows the control input voltage (top) and the corresponding
 The mechanical design was chosen to resemble spherical coordinates using two brushed DC motors and a screw linear actuator for the main motion and a stepper motor for the gripping mechanism.
 
 <p align="center">
-  <img src="./media/actual_assembly.png" height="300" alt="Actual Assembly"/>
-  <img src="./media/cad_assembly_2.png" height="300" alt = "CAD Assembly"/>
+  <img src="./media/actual_assembly.png" width="40%" alt="Actual Assembly"/>
+  <img src="./media/cad_assembly_2.png" width="40%" alt = "CAD Assembly"/>
 </p>
 
 ### 5. Electromechanical Dynamics Model
 Derived equations of motion for the electrical and mechanical system.
 
 <p align="center">
-  <img src="./media/simulink_EOMs.png" height="50%" alt="Equations of Motion"/>
+  <img src="./media/simulink_EOMs.png" width="35%" alt="Equations of Motion"/>
 </p>
 
 ## Skills & Software Used
