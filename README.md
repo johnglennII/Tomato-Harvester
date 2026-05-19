@@ -8,7 +8,7 @@ In this project, I developed the mechanical design, electromechanical model, and
 * **Precise Control:** Achieved end-effector position error magnitude under 3mm at max extension.
 * **Optimal State Estimation:** Implemented a Kalman Filter to estimate unmeasured states (motor currents and velocities) from the three measured states.
 * **System Identification:** Applied grey-box system identification to accurately obtain unkown model parameters using experimental data.
-* **Custom Fabrication:** Designed many hardware elements using Design for Manufacturing (DFM) principles and machined components on a vertical mill.
+* **Custom Fabrication:** Designed hardware elements using Design for Manufacturing (DFM) principles and machined components on a vertical mill.
 
 ## Visuals
 ### 1. Control System Demonstration
