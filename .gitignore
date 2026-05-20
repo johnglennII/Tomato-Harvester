@@ -1,1 +1,15 @@
+# SolidWorks temporary files
+~$*.sldprt
+~$*.sldasm
+~$*.slddrw
+~$*.sld
+
+# MATLAB temporary files
 *.asv
+
+# Simulink and SDRT auto-generated build and cache files
+slprj/
+*_sldrt_ert_win64/
+*.rxw64
+*.slxc
+*.autosave
